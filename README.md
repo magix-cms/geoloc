@@ -27,9 +27,9 @@
  * Une fois dans le plugin, laisser faire l'auto update
  
 #### Adresses
-![gmap-text](https://user-images.githubusercontent.com/356674/35143453-e24d10b4-fd01-11e7-9290-597e72e85442.png)
+![gmap-text](https://github.com/magix-cms/geoloc/assets/356674/11a3b430-bc24-407a-8a45-d57b23f04e1d)
 
-![gmap-address](https://user-images.githubusercontent.com/356674/35140881-24323ed6-fcf9-11e7-9e33-9d845a922f90.jpg)
+![gmap-address](https://github.com/magix-cms/geoloc/assets/356674/f00df18b-b5e7-456b-b76a-9f665d16c602)
 
 ## Note
  * Pour avoir une mise en page en rapport avec votre charte graphique, 
