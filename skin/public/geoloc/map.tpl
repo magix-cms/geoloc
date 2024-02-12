@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-12 col-sm-8 content">
                         <h3>{$addr.company}</h3>
-                        <p>{$addr.location.address}, <br />{$addr.location.postcode} {$addr.location.city}, {$addr.location.country}</p>
+                        {if $addr.location.address != ''}<p>{$addr.location.address}, <br />{/if}{$addr.location.postcode} {$addr.location.city}, {$addr.location.country}</p>
                         {if $addr.resume}<p>{$addr.resume|truncate:150:'&hellip;'}</p>{/if}
                         <div class="block-btn">
                             {if $addr.public_url}

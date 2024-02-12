@@ -1,6 +1,6 @@
 {extends file="layout.tpl"}
-{block name="title"}{seo_rewrite conf=['level'=>'root','type'=>'title','default'=>{#seo_title_geoloc#}]}{/block}
-{block name="description"}{seo_rewrite conf=['level'=>'root','type'=>'description','default'=>{#seo_desc_geoloc#}]}{/block}
+{block name="title"}{if !empty($page.seo_title_geoloc)}{$page.seo_title_geoloc}{else}{#seo_title_geoloc#}{/if}{/block}
+{block name="description"}{if !empty($page.seo_desc_geoloc)}{$page.seo_desc_geoloc}{else}{#seo_desc_geoloc#}{/if}{/block}
 {block name='body:id'}gmap{/block}
 {block name="styleSheet" append}{if $consentedCookies.ggMapCookies}
     {$css_files = ["geoloc","form"]}

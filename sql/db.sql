@@ -5,16 +5,18 @@ CREATE TABLE IF NOT EXISTS `mc_geoloc` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `mc_geoloc_content` (
-  `id_content` smallint(3) NOT NULL AUTO_INCREMENT,
-  `id_geoloc` smallint(3) unsigned NOT NULL,
-  `id_lang` smallint(3) unsigned NOT NULL,
-  `name_geoloc` varchar(175) DEFAULT NULL,
-  `content_geoloc` text,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `published_geoloc` smallint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id_content`),
-  KEY `id_geoloc` (`id_geoloc`),
-  KEY `id_lang` (`id_lang`)
+    `id_content` smallint(3) NOT NULL AUTO_INCREMENT,
+    `id_geoloc` smallint(3) UNSIGNED NOT NULL,
+    `id_lang` smallint(3) UNSIGNED NOT NULL,
+    `name_geoloc` varchar(175) DEFAULT NULL,
+    `content_geoloc` text,
+    `seo_title_geoloc` varchar(180) DEFAULT NULL,
+    `seo_desc_geoloc` text,
+    `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `published_geoloc` smallint(1) NOT NULL DEFAULT '0',
+    PRIMARY KEY (`id_content`),
+    KEY `id_geoloc` (`id_geoloc`),
+    KEY `id_lang` (`id_lang`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 ALTER TABLE `mc_geoloc_content`
@@ -52,6 +54,8 @@ CREATE TABLE IF NOT EXISTS `mc_geoloc_address_content` (
     `website_address` varchar(150) DEFAULT NULL,
     `suppl_address` varchar(150) DEFAULT NULL,
     `url_address` varchar(150) DEFAULT NULL,
+    `seo_title_address` varchar(180) DEFAULT NULL,
+    `seo_desc_address` text,
     `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `published_address` smallint(1) NOT NULL DEFAULT '0',
     PRIMARY KEY (`id_content`),

@@ -204,7 +204,9 @@ class plugins_geoloc_public extends plugins_geoloc_db {
                     'img' => !empty($data['img_address']) ? $this->imagesComponent->setModuleImage('geoloc', 'geoloc', $data['img_address'], $data['id_address']) : NULL,
                     'published' => $data['published_address'],
                     'order' => $data['order_address'],
-                    'public_url' => $publicUrl
+                    'public_url' => $publicUrl,
+                    'seo_title' => $data['seo_title_address'],
+                    'seo_desc' => $data['seo_desc_address']
                 ];
             }else{
                 $arr = [
@@ -227,7 +229,9 @@ class plugins_geoloc_public extends plugins_geoloc_db {
                     'img' => !empty($data['img_address']) ? $this->imagesComponent->setModuleImage('geoloc', 'geoloc', $data['img_address'], $data['id_address']) : NULL,
                     'published' => $data['published_address'],
                     'order' => $data['order_address'],
-                    'link' => $publicUrl
+                    'link' => $publicUrl,
+                    'seo_title' => $data['seo_title_address'],
+                    'seo_desc' => $data['seo_desc_address']
                 ];
             }
         }

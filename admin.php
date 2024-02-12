@@ -174,6 +174,8 @@ class plugins_geoloc_admin extends plugins_geoloc_db {
 					'id_lang' => $page['id_lang'],
 					'name_geoloc' => $page['name_geoloc'],
 					'content_geoloc' => $page['content_geoloc'],
+                    'seo_title_geoloc' => $page['seo_title_geoloc'],
+                    'seo_desc_geoloc' => $page['seo_desc_geoloc'],
 					'published_geoloc' => $page['published_geoloc']
 				];
 			}
@@ -231,6 +233,8 @@ class plugins_geoloc_admin extends plugins_geoloc_db {
                     'website_address'    => $page['website_address'],
                     'suppl_address'      => $page['suppl_address'],
 					'url_address' => $page['url_address'],
+                    'seo_title_address' => $page['seo_title_address'],
+                    'seo_desc_address' => $page['seo_desc_address'],
 					'public_url' => $publicUrl,
 					'img_address' => $page['img_address'],
 					'published_address' => $page['published_address'],

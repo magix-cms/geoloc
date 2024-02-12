@@ -1,6 +1,6 @@
 {extends file="layout.tpl"}
-{block name="title"}{seo_rewrite conf=['level'=>'root','type'=>'title','default'=>{$geoloc.company}]}{/block}
-{block name="description"}{seo_rewrite conf=['level'=>'root','type'=>'description','default'=>{$geoloc.company}]}{/block}
+{block name="title"}{if !empty($geoloc.seo_title)}{$geoloc.seo_title}{else}{$geoloc.company}{/if}{/block}
+{block name="description"}{if !empty($geoloc.seo_desc)}{$geoloc.seo_desc}{else}{$geoloc.company}{/if}{/block}
 {block name="styleSheet" append}
     {$css_files = ["cms","geoloc"]}
 {/block}
@@ -25,7 +25,7 @@
                     <td>
                         <meta itemprop="name" content="{$geoloc.company}">
                         <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                            <span itemprop="streetAddress">{$geoloc.location.address},</span>
+                            {if $geoloc.location.address != ''}<span itemprop="streetAddress">{$geoloc.location.address},</span>{/if}
                             <span itemprop="addressLocality">{$geoloc.location.city}</span>
                             <span itemprop="postalCode">{$geoloc.location.postcode}</span>
                             <span itemprop="addressCountry">{$geoloc.location.isocountry}</span>

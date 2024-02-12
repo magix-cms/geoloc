@@ -255,6 +255,8 @@ class plugins_geoloc_db {
 						SET 
 							name_geoloc = :name_geoloc,
 							content_geoloc = :content_geoloc,
+							seo_title_geoloc = :seo_title_geoloc,
+							seo_desc_geoloc = :seo_desc_geoloc,
 							published_geoloc = :published_geoloc
 						WHERE id_geoloc = :id 
 						AND id_lang = :id_lang';
@@ -281,6 +283,8 @@ class plugins_geoloc_db {
 							website_address = :website_address,
 							suppl_address = :suppl_address,
 							url_address = :url_address,
+							seo_title_address = :seo_title_address,
+							seo_desc_address = :seo_desc_address,
 							last_update = NOW(), 
 							published_address = :published_address
 						WHERE id_content = :id 

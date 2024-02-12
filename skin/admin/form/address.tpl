@@ -187,6 +187,29 @@
                                         </div>
                                     </div>
                                 </fieldset>
+                                <div class="form-group">
+                                    <button class="btn collapsed btn-collapse" role="button" data-toggle="collapse" href="#metas-{$id}" aria-expanded="true" aria-controls="metas-{$id}">
+                                        <span class="fa"></span> {#display_metas#|ucfirst}
+                                    </button>
+                                </div>
+                                <div id="metas-{$id}" class="collapse">
+                                    <div class="row">
+                                        <div class="col-ph-12 col-sm-8">
+                                            <div class="form-group">
+                                                <label for="address[content][{$id}][seo_title_address]">{#title#|ucfirst} :</label>
+                                                <textarea class="form-control" id="address[content][{$id}][seo_title_address]" name="address[content][{$id}][seo_title_address]" cols="70" rows="3">{$address.content[{$id}].seo_title_address}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-ph-12 col-sm-8">
+                                            <div class="form-group">
+                                                <label for="address[content][{$id}][seo_desc_address]">Description :</label>
+                                                <textarea class="form-control" id="address[content][{$id}][seo_desc_address]" name="address[content][{$id}][seo_desc_address]" cols="70" rows="3">{$address.content[{$id}].seo_desc_address}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             {/if}
                             {*<fieldset>
                                 <legend>Options</legend>
